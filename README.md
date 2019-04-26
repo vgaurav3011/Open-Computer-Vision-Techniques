@@ -20,9 +20,7 @@ OpenCV provides various methods for this purpose:
 
 --cv2.imwrite(): This method is used to save an image in the memory as a file format.
 
-```
-![Original Pic](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/itachi.jpg)
-```
+![alt text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/itachi.jpg)
 
 
 
