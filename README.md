@@ -35,6 +35,7 @@ The following methods are used for Video Processing:
 --cap.read(): returns a bool value whether the frame can be read or not and second returned value  is indicating if the frame is actually the frame or not.
 
 --cv2.cvtColor(frame, cv2.COLOR_PROPERTY): It is the OpenCV operation used to apply any color property to the video say for example of converting the frame from BGR to grayscale frame we make use of cv2.COLOR_BGR2GRAY.
+![alt text](https://media.tenor.com/images/227784b99e4e761c237b19986bcd980e/tenor.gif)
 
 ### Drawing Tools
 
