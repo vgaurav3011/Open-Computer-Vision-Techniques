@@ -250,6 +250,12 @@ Hysteresis Thresholding is the stage which decides which are all edges are actua
 ![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/hysteresis.jpg)
 
 
+
+<br/>
+
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/canny_edge.png)
+<br/>
+
 ### Image Segmentation with Watershed Algorithm
 
 Any grayscale image can be viewed as a topographic surface where high intensity denotes peaks and hills while low intensity denotes valleys.  You start filling every isolated valleys (local minima) with different colored water (labels). As the water rises, depending on the peaks (gradients) nearby, water from different valleys, obviously with different colors will start to merge. To avoid that, you build barriers in the locations where water merges. You continue the work of filling water and building barriers until all the peaks are under water. Then the barriers you created gives you the segmentation result. This is the “philosophy” behind the watershed. But this approach gives you oversegmented result due to noise or any other irregularities in the image. So OpenCV implemented a marker-based watershed algorithm where you specify which are all valley points are to be merged and which are not. It is an interactive image segmentation.
