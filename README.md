@@ -266,6 +266,8 @@ If we flood this surface from its minima and prevent the merging of waters comin
 
 This can be further improved with the use of markers and we can use these markers to control the flooding of the topographic surface, doing so we prevent the over segmentation.
 
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/watershed.png)
+
 ### Background Subtraction
 
 It is a major preprocessing step for any vision based application. This helps in making arrangements for extracting the objects from the gradients and scenes behind the target objects.
