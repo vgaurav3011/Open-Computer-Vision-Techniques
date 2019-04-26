@@ -249,10 +249,10 @@ Hysteresis Thresholding is the stage which decides which are all edges are actua
 
 
 The final results will look as follows:
-<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width="200",height="200">
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width="200" height="200">
 
 
-<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_1-1.png" width="200",height="200">
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_1-1.png" width="200" height="200">
 
 ### Image Segmentation with Watershed Algorithm
 
@@ -263,10 +263,10 @@ Consider any image to be a topographic surface.
 If we flood this surface from its minima and prevent the merging of waters coming from different sources, we partition the image into two different sets: The catchement basins and watershed lines. If we apply this transformation, the catchment basin should theoretically correspond to the homogeneous grey level regions of the image and also this may result in over segmentation due to noise or irregularities in the gradient image.
 
 This can be further improved with the use of markers and we can use these markers to control the flooding of the topographic surface, doing so we prevent the over segmentation.
-<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width="200",height="200">
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width="200" height="200">
 
 
-<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_2.png" width="200",height="200">
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_2.png" width="200" height="200">
 
 ### Background Subtraction
 
