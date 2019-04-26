@@ -159,15 +159,18 @@ In order to blend or mix two images we make use of cv2.addWeighted and can assig
 #### Scaling
 
         It is simply resizing of the images which makes use of cv2.resize() for the purpose. This size of image can be specified manually or we can also specify the scaling factor. Preferable interpolation methods are cv2.INTER_AREA for shrinking and cv2.INTER_CUBIC(slow) and cv2.INTER_LINEAR  for zooming. By default, we make use of cv2.INTER_LINEAR for any such use.
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/scaled.png">
 
 #### Translation
 
         The process of shifting the coordinates of an object from one place to other is called translation. It is created in form of a translation matrix. 
+        
 ![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/translation.png)
 
 #### Perspective Transformation
 
         For perspective transformation, we make use of 3x3 transformation matrix and in which the straight lines will remain straight even after the transformation. To find this transformation we just make use of the points of ROI selected in the image and its corresponding points in the output image. It is performed by the function cv2.getPerspectiveTransform() and followed by applying cv2.warpPerspective() to the tranformation matrix obtained.
+        
 ![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/perspective_transform.png)
 
 #### Rotation
@@ -244,8 +247,10 @@ Hysteresis Thresholding is the stage which decides which are all edges are actua
 
 
 The final results will look as follows:
-![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg)
-![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_1-1.png)
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width=200,height=200>
+
+
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_1-1.png" width=200,height=200>
 
 ### Image Segmentation with Watershed Algorithm
 
@@ -256,8 +261,10 @@ Consider any image to be a topographic surface.
 If we flood this surface from its minima and prevent the merging of waters coming from different sources, we partition the image into two different sets: The catchement basins and watershed lines. If we apply this transformation, the catchment basin should theoretically correspond to the homogeneous grey level regions of the image and also this may result in over segmentation due to noise or irregularities in the gradient image.
 
 This can be further improved with the use of markers and we can use these markers to control the flooding of the topographic surface, doing so we prevent the over segmentation.
-![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg)
-![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_2.png)
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg" width=200,height=200>
+
+
+<img src="https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_2.png" width=200,height=200>
 
 ### Background Subtraction
 
