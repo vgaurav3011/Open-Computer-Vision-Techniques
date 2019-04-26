@@ -35,7 +35,7 @@ The following methods are used for Video Processing:
 --cap.read(): returns a bool value whether the frame can be read or not and second returned value  is indicating if the frame is actually the frame or not.
 
 --cv2.cvtColor(frame, cv2.COLOR_PROPERTY): It is the OpenCV operation used to apply any color property to the video say for example of converting the frame from BGR to grayscale frame we make use of cv2.COLOR_BGR2GRAY.
-![alt text](https://media.tenor.com/images/227784b99e4e761c237b19986bcd980e/tenor.gif)
+![alt text](https://giffiles.alphacoders.com/139/13961.gif)
 
 ### Drawing Tools
 
@@ -59,10 +59,11 @@ eg. cv2.circle(image_name, (50,50), 65, (255, 0, 0), -1) is the circle drawn fro
 
 eg.cv2.ellipse(img,(256,256),(100,50),0,0,180,255,-1)  draws an ellipse with (256, 256) as center, (100, 50) as (major,minor) axis, rotated (0) degrees, with (0, 180) as start angle and end angle with Blue color (255) and filled completely.
 
+
 ### Image Processing Operations
 
 Every image can be represented as an array of pixels in form of a matrix using Numpy Library in Python. After reading of the image, we make use of the rows and columns values to access a certain pixel value. For a RGB image, the order of pixels is BGR and returns Blue, Green and Red Pixels. If the image is grayscaled then the corresponding intensity is returned.
-
+![alt-text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BuWm8wdkNpRp-yhIRN9rJLPsBesHPDKsuizUMWlrOavIOvDkBg)
 #### Image Properties
 
 1. Rows
@@ -98,6 +99,10 @@ Both the images are of same depth and type while the second image is just a scal
 #### Image Blending
 
 In order to blend or mix two images we make use of cv2.addWeighted and can assign weights to each image as well.
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/kakashi.jpg)
+![alt text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/itachi.jpg)
+![alt text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Added%20Images_screenshot_21.04.2019.png)
+
 
 #### Bitwise Operations
 
@@ -146,7 +151,6 @@ In order to blend or mix two images we make use of cv2.addWeighted and can assig
 
 ### Transformations of Images
 
-```
 #### Scaling
 
         It is simply resizing of the images which makes use of cv2.resize() for the purpose. This size of image can be specified manually or we can also specify the scaling factor. Preferable interpolation methods are cv2.INTER_AREA for shrinking and cv2.INTER_CUBIC(slow) and cv2.INTER_LINEAR  for zooming. By default, we make use of cv2.INTER_LINEAR for any such use.
@@ -154,19 +158,24 @@ In order to blend or mix two images we make use of cv2.addWeighted and can assig
 #### Translation
 
         The process of shifting the coordinates of an object from one place to other is called translation. It is created in form of a translation matrix. 
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/translation.png)
 
 #### Perspective Transformation
 
         For perspective transformation, we make use of 3x3 transformation matrix and in which the straight lines will remain straight even after the transformation. To find this transformation we just make use of the points of ROI selected in the image and its corresponding points in the output image. It is performed by the function cv2.getPerspectiveTransform() and followed by applying cv2.warpPerspective() to the tranformation matrix obtained.
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/perspective_transform.png)
 
 #### Rotation
 
         The process of rotation involves shifting the object with respect to an angle on the axis of rotation. This is done by translating the object to its current axis followed by rotating it about that axis and finally translating it back with respect to the new axis.
+       
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Rotated_image.png)
 
 #### Affine Transformation
 
         In this case, all parallel lines in  the original image will remain parallel lines in the output images too. To calculate the transformation matrix, we take 3 points on the input image and get their corresponding points on the output image too. Then, we make use of cv2.getAffineTransform() followed by cv2.warpAffine().
-```
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/affine_transformation.png)
+
 
 ### Image Thresholding
 
@@ -203,7 +212,7 @@ In order to blend or mix two images we make use of cv2.addWeighted and can assig
 ```
            The only way of verifying whether a threshold value is good or not has been hit and trial so far clearly not so efficient. Consider a simple bimodal image whose histograms has atleast two peaks. So, it automatically calculates the binary threshold value from the histogram peak value. For this, we pass an extra argument of cv2.THRESH_OTSU as flag in the cv2.threshold() method.
 ```
-
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/adaptive_thresholding.png)
 ### Edge Detection
 
 #### Canny Edge Detector
@@ -222,10 +231,16 @@ The edges of an image are vulnerable to the noises so that the first step would 
 Edge Gradient (G) = (G(x)^2 + G(y)^2)^(1/2)
 
 Hence, the gradient direction will be always perpendicular to the edges. It is rounded to one of the four angles representing the vertical, horizontal and two diagonal directions.
-
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/sobel.jpg)
 After getting gradient magnitude and direction, we obtain a full scan image to remove all other unwanted edges. For this, at every pixel, pixel is checked for local maximum in its neighbourhood in the direction of gradient. This stage is used to obtain binary images with thin edges.
 
 Hysteresis Thresholding is the stage which decides which are all edges are actually the edges and which are not. It takes two threshold values minVal and maxVal. Any edges with the intensity gradient more than maxVal are sure to be edges and those below minVal are sure to be non-edges based on their connectivity. 
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/hysteresis.jpg)
+
+
+The final results will look as follows:
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg)
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_1-1.png)
 
 ### Image Segmentation with Watershed Algorithm
 
@@ -236,7 +251,10 @@ Consider any image to be a topographic surface.
 If we flood this surface from its minima and prevent the merging of waters coming from different sources, we partition the image into two different sets: The catchement basins and watershed lines. If we apply this transformation, the catchment basin should theoretically correspond to the homogeneous grey level regions of the image and also this may result in over segmentation due to noise or irregularities in the gradient image.
 
 This can be further improved with the use of markers and we can use these markers to control the flooding of the topographic surface, doing so we prevent the over segmentation.
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/nitc.jpeg)
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/Figure_2.png)
 
 ### Background Subtraction
 
 It is a major preprocessing step for any vision based application. This helps in making arrangements for extracting the objects from the gradients and scenes behind the target objects.
+![alt-text](https://github.com/vgaurav3011/Open-Computer-Vision-Techniques/blob/master/backgr_sub.png)
