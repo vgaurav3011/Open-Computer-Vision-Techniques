@@ -35,6 +35,8 @@ The following methods are used for Video Processing:
 --cap.read(): returns a bool value whether the frame can be read or not and second returned value  is indicating if the frame is actually the frame or not.
 
 --cv2.cvtColor(frame, cv2.COLOR_PROPERTY): It is the OpenCV operation used to apply any color property to the video say for example of converting the frame from BGR to grayscale frame we make use of cv2.COLOR_BGR2GRAY.
+
+
 ![alt text](https://giffiles.alphacoders.com/139/13961.gif)
 
 ### Drawing Tools
@@ -62,8 +64,11 @@ eg.cv2.ellipse(img,(256,256),(100,50),0,0,180,255,-1)  draws an ellipse with (25
 
 ### Image Processing Operations
 
-Every image can be represented as an array of pixels in form of a matrix using Numpy Library in Python. After reading of the image, we make use of the rows and columns values to access a certain pixel value. For a RGB image, the order of pixels is BGR and returns Blue, Green and Red Pixels. If the image is grayscaled then the corresponding intensity is returned.
-![alt-text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BuWm8wdkNpRp-yhIRN9rJLPsBesHPDKsuizUMWlrOavIOvDkBg)
+<p>Every image can be represented as an array of pixels in form of a matrix using Numpy Library in Python. After reading of the image, we make use of the rows and columns values to access a certain pixel value. For a RGB image, the order of pixels is BGR and returns Blue, Green and Red Pixels. If the image is grayscaled then the corresponding intensity is returned.</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BuWm8wdkNpRp-yhIRN9rJLPsBesHPDKsuizUMWlrOavIOvDkBg" align="center">
+
+
 #### Image Properties
 
 1. Rows
