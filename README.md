@@ -1,3 +1,9 @@
+![alt text](https://cdn-images-1.medium.com/max/2600/1*S8Il5ethl3YFh0M9XKVz-A.png)
+
+This has been published as a blog under Free Software Movement of Karnataka on the following link:
+https://blog.glugmvit.com/opencv/
+
+
 ## OpenCV Techniques and Approaches
 
 Open Computer Vision is a simple library aimed at computer vision programming in real time.
